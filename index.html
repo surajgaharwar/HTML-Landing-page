@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+        }
+        .nav-menu {
+            display: flex;
+            gap: 20px;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .nav-menu li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        .menu-toggle {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+        .testimonials {
+            margin: 50px 0;
+            padding: 20px;
+        }
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                right: 20px;
+                background: #333;
+                padding: 10px;
+                border-radius: 5px;
+            }
+            .nav-menu.active {
+                display: flex;
+            }
+            .menu-toggle {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>Landing Page</h1>
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact">Contact</a></li>
+
+
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h2>"Discover Excellence with Us"</h2>
+        <p>Your ultimate destination for top-notch services.</p>
+        <button onclick="showMessage()">Get Started</button>
+    </section>
+
+    <section class="services" id="services">
+        <h2>Our Services</h2>
+        <ul>
+            <li>
+                <h3>Secure & Reliable</h3>
+                <p>Your data is safe with top-notch security measures.</p>
+            </li>
+            <li>
+                <h3>User-Friendly Interface</h3>
+                <p>Intuitive design for a seamless experience.</p>
+            </li>
+            <li>
+                <h3>24/7 Support</h3>
+                <p>Get assistance anytime you need it.</p>
+            </li>
+        </ul>
+    </section>
+
+    <section class="testimonials" id="testimonials">
+        <h2>What Our Customers Say</h2>
+        <p>🌟 "Absolutely amazing! Exceeded my expectations." – Rahul Sharma</p>
+
+    
+        <p>🌟 "A game-changer! Super easy to use and efficient." – Priya Patel</p>
+    </section>
+
+    <section class="contact" id="contact">
+        <h2>Contact Us</h2>
+        <form id="contactForm">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+
+    <footer class="footer">
+        <p>"Designed for Excellence • Built for You • © 2024 All Rights Reserved.".</p>
+        <p>By Suraj Singh Gaharwar</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
